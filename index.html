@@ -13,6 +13,15 @@
       </header>
       <todo-footer></todo-footer>
       <todo-list></todo-list>
+      <my-component1></my-component1>
+      <my-component2></my-component2>
+
+      <child-component1 v-bind:propsdata="message2"></child-component1>
+      <child-component2 v-on:show-log="printText"></child-component2>
+
+      <child-component3></child-component3>
+
+      <sibling-component v-bind:siblingdata="message3"></sibling-component>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
