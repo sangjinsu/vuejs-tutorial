@@ -7,31 +7,15 @@
     <title>Vue Tutorial</title>
   </head>
   <body>
-    <div id="app">{{message}}</div>
+    <div id="app">
+      <header>
+        <h3>{{message}}</h3>
+      </header>
+      <todo-footer></todo-footer>
+      <todo-list></todo-list>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script>
-      new Vue({
-        el: '#app',
-        data: {
-          message: 'Hello Vue.js!',
-        },
-        beforeCreate: function () {
-          console.log('beforeCreate')
-        },
-        created: function () {
-          console.log('created')
-        },
-        mounted: function () {
-          console.log('mounted')
-          this.message = 'Hello World!'
-        },
-        beforeUpdated: function () {
-          console.log('beforeUpdated')
-        },
-        updated: function () {
-          console.log('updated')
-        },
-      })
-    </script>
+    <script src="js/app.js"></script>
   </body>
 </html>
