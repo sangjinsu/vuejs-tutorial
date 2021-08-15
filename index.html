@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue Sample</title>
+    <title>Vue Tutorial</title>
   </head>
   <body>
     <div id="app">{{message}}</div>
@@ -14,6 +14,22 @@
         el: '#app',
         data: {
           message: 'Hello Vue.js!',
+        },
+        beforeCreate: function () {
+          console.log('beforeCreate')
+        },
+        created: function () {
+          console.log('created')
+        },
+        mounted: function () {
+          console.log('mounted')
+          this.message = 'Hello World!'
+        },
+        beforeUpdated: function () {
+          console.log('beforeUpdated')
+        },
+        updated: function () {
+          console.log('updated')
         },
       })
     </script>
