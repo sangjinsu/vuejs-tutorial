@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h3>첫번째 인스턴스 영역</h3>
+      <my-global-component></my-global-component>
+      <my-local-component></my-local-component>
+    </div>
+    <hr />
+    <div id="app2">
+      <h3>두번째 인스턴스 영역</h3>
+      <my-global-component></my-global-component>
+      <my-local-component></my-local-component>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      Vue.component('my-global-component', {
+        template: '<div>전역 컴포넌트가 등록되었습니다!</div>',
+      })
+
+      const cmp = {
+        template: '<div>지역 컴포넌트가 등록되었습니다!</div>',
+      }
+
+      new Vue({
+        el: '#app',
+        components: {
+          'my-local-component': cmp,
+        },
+      })
+
+      new Vue({
+        el: '#app2',
+      })
+    </script>
+  </body>
+</html>
