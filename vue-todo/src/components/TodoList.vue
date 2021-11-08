@@ -1,16 +1,13 @@
 <template>
-  <div>
-    list
-  </div>
+  <div>list</div>
 </template>
 
 
 <script>
 export default {
-  
-}
+  name: "TodoList",
+};
 </script>
 
 <style>
-
 </style>

@@ -1,16 +1,13 @@
 <template>
-  <div>
-    input
-  </div>
+  <div>input</div>
 </template>
 
 
 <script>
 export default {
-  
-}
+  name: "TodoInput",
+};
 </script>
 
 <style>
-
 </style>
