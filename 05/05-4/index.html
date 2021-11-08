@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <a v-if="flag">두잇 vue.js</a>
+      <ul>
+        <li v-for="system in systems">{{ system }}</li>
+      </ul>
+      <p v-show="flag">두잇 vue.js</p>
+      <h5 v-bind:id="uid">뷰 입문서</h5>
+      <button v-on:click="popupAlert">경고</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          flag: true,
+          systems: ['ios', 'window'],
+          uid: 10,
+        },
+        methods: {
+          popupAlert() {
+            return alert('alert')
+          },
+        },
+      })
+    </script>
+  </body>
+</html>
